@@ -68,6 +68,24 @@ const attachmentSupport = {
 };
 
 /**
+ * Message format support for multi-character chats
+ * Gab AI uses OpenAI-compatible format which supports the name field
+ */
+const messageFormat = {
+  supportsNameField: true,
+  supportedRoles: ['user', 'assistant'] as ('user' | 'assistant')[],
+  maxNameLength: 64,
+};
+
+/**
+ * Cheap model configuration for background tasks
+ */
+const cheapModels = {
+  defaultModel: 'gab-01',
+  recommendedModels: ['gab-01'],
+};
+
+/**
  * The Gab AI Provider Plugin
  * Implements the LLMProviderPlugin interface for Quilltap
  *
@@ -82,6 +100,17 @@ export const plugin: LLMProviderPlugin = {
   capabilities,
 
   attachmentSupport,
+
+  // Registry-based configuration properties
+  messageFormat,
+
+  charsPerToken: 3.5,
+
+  toolFormat: 'openai',
+
+  cheapModels,
+
+  defaultContextWindow: 128000,
 
   /**
    * Factory method to create a Gab AI LLM provider instance

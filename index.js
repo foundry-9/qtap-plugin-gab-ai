@@ -116,11 +116,26 @@ var attachmentSupport = {
   description: "No attachment support (text only)",
   notes: "Gab AI does not currently support file attachments"
 };
+var messageFormat = {
+  supportsNameField: true,
+  supportedRoles: ["user", "assistant"],
+  maxNameLength: 64
+};
+var cheapModels = {
+  defaultModel: "gab-01",
+  recommendedModels: ["gab-01"]
+};
 var plugin = {
   metadata,
   config,
   capabilities,
   attachmentSupport,
+  // Registry-based configuration properties
+  messageFormat,
+  charsPerToken: 3.5,
+  toolFormat: "openai",
+  cheapModels,
+  defaultContextWindow: 128e3,
   /**
    * Factory method to create a Gab AI LLM provider instance
    */
