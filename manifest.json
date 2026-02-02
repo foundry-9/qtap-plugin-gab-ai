@@ -1,9 +1,9 @@
 {
-  "$schema": "../qtap-plugin-template/schemas/plugin-manifest.schema.json",
+  "$schema": "https://raw.githubusercontent.com/foundry-9/quilltap/refs/heads/main/plugins/dist/qtap-plugin-template/schemas/plugin-manifest.schema.json",
   "name": "qtap-plugin-gab-ai",
   "title": "Gab AI Provider",
   "description": "Provides Gab AI language models for Quilltap",
-  "version": "1.0.0",
+  "version": "1.2.2",
   "author": {
     "name": "Foundry-9 LLC",
     "email": "charles.sebold@foundry-9.com",

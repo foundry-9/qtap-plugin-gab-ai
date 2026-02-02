@@ -22,7 +22,7 @@ This is a Quilltap LLM provider plugin that integrates Gab AI's API. The plugin 
 - **index.ts** - Plugin entry point exporting the `LLMProviderPlugin` interface with metadata, config, capabilities, and factory methods
 - **provider.ts** - `GabAIProvider` class extending `OpenAICompatibleProvider` from `@quilltap/plugin-utils` with Gab-specific config (base URL: `https://gab.ai/v1`)
 - **types.ts** - Re-exports types from `@quilltap/plugin-types`
-- **manifest.json** - Plugin metadata including compatibility requirements (Quilltap >=1.7.0, Node >=18.0.0)
+- **manifest.json** - Plugin metadata including compatibility requirements (Quilltap >=1.7.0, Node >=18.0.0). Keep version in sync with package.json.
 - **icon.tsx** - React component for the provider icon
 
 ### Build System
